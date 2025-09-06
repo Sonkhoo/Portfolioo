@@ -223,7 +223,7 @@ export default function Portfolio() {
   
             {/* Hero */}
             <section className="text-center py-16">
-              <h1 className="text-5xl md:text-5xl font-bold font-pixel inline-block pb-2 mb-4">
+              <h1 className="text-5xl md:text-5xl font-bold inline-block pb-2 mb-4">
                 Hi, I'm{" "}
                 <Highlighter action="underline" color="#FF9800" animationDuration={2000}>
                   Sankhadeep.
@@ -287,7 +287,7 @@ export default function Portfolio() {
                 <div key={category.title} className="border border-foreground bg-transparent p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <IconComponent size={20} className="text-foreground" />
-                    <h3 className="text-lg font-semibold font-pixel">{category.title}</h3>
+                    <h3 className="text-lg font-semibold ">{category.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
@@ -324,7 +324,7 @@ export default function Portfolio() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="font-semibold font-pixel text-lg">{project.title}</CardTitle>
+                  <CardTitle className="font-semibold  text-lg">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-sm text-muted-foreground">{project.desc}</p>
@@ -387,7 +387,7 @@ export default function Portfolio() {
 
                     <div className="flex-1 flex items-center justify-between">
                       <div>
-                        <h3 className="font-normal font-pixel mb-1">{work.company}</h3>
+                        <h3 className="font-normal mb-1">{work.company}</h3>
                         <p className="text-muted-foreground font-mono text-sm">{work.position}</p>
                       </div>
                       <div className="text-right">
