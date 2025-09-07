@@ -23,11 +23,33 @@ const lexendDeca = Lexend_Deca({
   display: 'swap',
 })
 
+
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
-}
+  title: "Sankhadeep | Portfolio",
+  description: "Full Stack Developer Portfolio",
+  openGraph: {
+    title: "Sankhadeep | Portfolio",
+    description: "Full Stack Developer Portfolio",
+    url: "https://portfolio-sankhadeepchowdhury.vercel.app",
+    siteName: "Sankhadeep | Portfolio",
+    images: [
+      {
+        url: "https://portfolio-sankhadeepchowdhury.vercel.app/images/hero.jpeg", // better to use absolute URL
+        width: 1200,
+        height: 630,
+        alt: "Sankhadeep Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sankhadeep | Portfolio",
+    description: "Full Stack Developer Portfolio",
+    images: ["https://portfolio-sankhadeepchowdhury.vercel.app/images/hero.jpeg"], // again, absolute URL is safer
+  },
+  generator: "Next.js",
+};
 
 export default function RootLayout({
   children,

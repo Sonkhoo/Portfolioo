@@ -256,22 +256,21 @@ export default function Portfolio() {
               {/* Sections */}
               {active === "about" && (
                 <section className="py-12 text-center text-base md:text-lg">
-  <p className="text-justify max-w-3xl mx-auto">
-    I’m a full-stack web and mobile developer with hands-on experience in backend systems, cloud platforms, and AI/ML integrations. 
-    I build scalable microservices, real-time apps, and intelligent solutions while leveraging strong fundamentals in DSA, OOP, and system design.
-  </p>
-  <div className="flex gap-4 justify-center mt-6 py-4">
-    {["Full-Stack", "Backend", "Cloud", "Generative AI", "DevOps", "Mobile"].map((t) => (
-      <Badge
-        key={t}
-        className="rounded-none border border-foreground bg-transparent text-foreground font-mono text-xs tracking-wide"
-      >
-        {t}
-      </Badge>
-    ))}
-  </div>
-</section>
-
+                <p className="text-left sm:text-justify max-w-3xl mx-auto px-4">
+                  I’m a full-stack web and mobile developer with hands-on experience in backend systems, cloud platforms, and AI/ML integrations. 
+                  I build scalable microservices, real-time apps, and intelligent solutions while leveraging strong fundamentals in DSA, OOP, and system design.
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center mt-6 py-4">
+                  {["Full-Stack", "Backend", "Cloud", "Generative AI", "DevOps", "Mobile"].map((t) => (
+                    <Badge
+                      key={t}
+                      className="rounded-none border border-foreground bg-transparent text-foreground font-mono text-xs sm:text-sm tracking-wide px-2 py-1 whitespace-normal break-words"
+                    >
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+              </section>
               )}
               {active === "skills" && (
                 <section className="py-12">
@@ -284,19 +283,23 @@ export default function Portfolio() {
                     {skillCategories.map((category) => {
                     const IconComponent = category.icon
                     return (
-                <div key={category.title} className="border border-foreground bg-transparent p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <IconComponent size={20} className="text-foreground" />
-                    <h3 className="text-lg font-semibold ">{category.title}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <Badge
-                        key={skill}
-                        className="rounded-none border border-foreground bg-transparent text-foreground font-mono text-xs tracking-wide hover:bg-foreground hover:text-background transition-colors"
+                      <div
+                        key={category.title}
+                        className="border border-foreground bg-transparent p-6 box-border w-full max-w-full"
                       >
-                        {skill}
-                      </Badge>
+                        <div className="flex items-center gap-3 mb-4">
+                          <IconComponent size={20} className="text-foreground" />
+                          <h3 className="text-lg font-semibold">{category.title}</h3>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2 w-full">
+                          {category.skills.map((skill) => (
+                            <Badge
+                              key={skill}
+                              className="whitespace-normal break-words flex-wrap rounded-none border border-foreground bg-transparent text-foreground font-mono text-xs sm:text-sm tracking-wide px-2 py-1 max-w-full"
+                            >
+                              {skill}
+                            </Badge>
                     ))}
                   </div>
                 </div>
@@ -310,7 +313,7 @@ export default function Portfolio() {
           <h2 className="text-2xl font-semibold mb-6 text-center">
             <Highlighter action="underline" color="#FF9800">Projects</Highlighter>
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-full md:max-w-6xl mx-auto">
             {projects.map((project) => (
               <Card
                 key={project.title}
